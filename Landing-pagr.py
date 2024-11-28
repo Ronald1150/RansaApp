@@ -3,9 +3,7 @@ import flet as ft
 
 def main(page: ft.Page):
     page.title = "Ransa Negocio"
-    page.bgcolor = "#FFFFFF"  # Fondo de la página en hexadecimal
-
-    # Crear AppBar con botones personalizados
+    page.bgcolor = "#FFFFFF" 
     page.appbar = ft.AppBar(
         title=ft.Text("Ransa Negocio", color=ft.colors.WHITE),
         bgcolor="#1B5051",  # Fondo de la AppBar
@@ -34,48 +32,27 @@ def main(page: ft.Page):
             ),
         ],
     )
+    st = ft.Stack(
+            ft.Image(
+                src="Imagene-de-mercado.png",
+                width=300,
+                height=300,
+                fit=ft.ImageFit.CONTAIN,
+            ),
+    ),
 
-    # Crear contenedores con estilos manuales
-    left_container = ft.Container(
+    main_content= ft.Container(
         content=ft.Column(
-            controls=[
-                ft.Image(src="Imagene-de-mercado.png", width=200, height=200),
-                ft.Text("Acuerdos comerciales y financieros",
-                        weight=ft.FontWeight.NORMAL),
-            ],
-        ),
-        bgcolor=ft.colors.WHITE,
-        padding=20,
-        border_radius=10,
-    )
-
-    right_container = ft.Container(
-        content=ft.Column(
-            controls=[
-                ft.Image(src="imagenen-de-camion.png", width=200, height=200),
-                ft.Text("Servicio de transporte de mercancías",
-                        weight=ft.FontWeight.NORMAL),
-            ],
-        ),
-        bgcolor=ft.colors.BLACK,
-        padding=20,
-        border_radius=10,
-    )
-
-    # Crear contenido principal
-    main_content = ft.Container(
-        content=ft.Column(
-            controls=[
-                left_container,  # Usar el contenedor creado arriba
-                right_container,  # Añadir el nuevo contenedor
+            controls=[  # Usar el contenedor creado arriba
+          # Añadir el nuevo contenedor
                 ft.Container(
                     content=ft.Text(
-                        "Este es un texto con fondo personalizado",
+                        "Camiones de carga a tu disposicióncon la flota camiones tipo carguero",
                         size=24,
                         weight=ft.FontWeight.BOLD,
                         color=ft.colors.WHITE,  # Texto blanco para contraste
                     ),
-                    padding=20,
+                    padding=2,
                     bgcolor="#1B5051",  # Fondo del contenedor
                     border_radius=10,  # Esquinas redondeadas
                 ),
@@ -87,7 +64,7 @@ def main(page: ft.Page):
     )
 
     # Botón en la parte inferior derecha
-    bottom_right_button = ft.Container(
+    bottom_right_button= ft.Container(
         content=ft.ElevatedButton(
             "Saber más",
             on_click=lambda _: print("Saber más"),
