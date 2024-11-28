@@ -36,7 +36,7 @@ def main(page: ft.Page):
                 src="Imagene-de-mercado.png",
                 width=600,
                 height=400,
-                fit=ft.ImageFit.CONTAIN
+                fit=ft.ImageFit.FIT_HEIGHT
             )
 
     main_content= ft.Container(
@@ -52,13 +52,18 @@ def main(page: ft.Page):
                     ),
                     padding=2,
                     bgcolor="#1B5051",  # Fondo del contenedor
-                    border_radius=10,  # Esquinas redondeadas
+                    border_radius=20,
+                    width=300,
+                    height=100,
                 ),
             ],
+
             alignment=ft.CrossAxisAlignment.CENTER,
             spacing=20,
         ),
         padding=20,
+        height=100,
+        width=300
     )
 
     # Botón en la parte inferior derecha
@@ -73,8 +78,8 @@ def main(page: ft.Page):
                     radius=8),  # Esquinas redondeadas
             ),
         ),
-        alignment=ft.alignment.bottom_right,  # Alinear a la parte inferior derecha
-        padding=-25,  # Ajustar el padding según sea necesario
+        alignment=ft.alignment.bottom_right,
+        padding=100
     )
 
     # Agregar contenido principal y botón a la página
