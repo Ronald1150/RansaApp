@@ -79,7 +79,7 @@ def main(page: ft.Page):
             ),
         ),
         alignment=ft.alignment.bottom_right,
-        padding=100
+        ft.padding.top(90)
     )
 
     # Agregar contenido principal y botón a la página
