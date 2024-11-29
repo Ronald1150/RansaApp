@@ -114,3 +114,5 @@ Si la información de detalles mostrada por el sistema es incorrecto, el cliente
 
 
 ## Yo utilisare patron de arquitectura limpia
+# Herramientas utilizadas:
+- [Figma](https://www.figma.com/design/QHVmwBW0M6Umt1VCRosghT/Landing-page?node-id=0-1&t=WOX98mnI72gVFq5e-1)
